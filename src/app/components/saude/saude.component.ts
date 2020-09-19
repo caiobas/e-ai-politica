@@ -19,7 +19,6 @@ export class SaudeComponent implements OnInit {
     this.politicaApi.List().subscribe(lista => {
       this.politicaLista = lista;
       this.politicaLista = lista.filter(function(itemLista){
-        console.log(itemLista.tags);
         return itemLista.tags.includes('Saúde');
       });
     })
