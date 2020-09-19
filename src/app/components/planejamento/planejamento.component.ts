@@ -10,16 +10,15 @@ import { PoliticaApiService } from 'src/app/services/politica-api.service';;
 export class PlanejamentoComponent implements OnInit {
 
   politicaLista: PoliticaModel[];
-
-  constructor(private politicaApi:PoliticaApiService) { }
-
+  constructor(private politicaApi: PoliticaApiService) { }
 
   ngOnInit(): void {
-    this.politicaApi.List().subscribe((lista) => {
+    this.politicaApi.List().subscribe(lista => {
+      this.politicaLista = lista;
       this.politicaLista = lista.filter(function(itemLista){
+        console.log(itemLista.tags);
         return itemLista.tags.includes('Planejamento Urbano');
       });
     })
   }
-
 }

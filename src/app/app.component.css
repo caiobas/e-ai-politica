@@ -1,0 +1,9 @@
+app-info-card{
+  margin: 5px ;
+  display: block;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+}
