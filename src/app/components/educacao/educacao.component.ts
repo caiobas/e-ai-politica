@@ -10,13 +10,17 @@ import { PoliticaApiService } from 'src/app/services/politica-api.service';
 })
 export class EducacaoComponent implements OnInit {
 
-  listaPolitica: PoliticaModel[];
+  politicaLista: PoliticaModel[];
 
   constructor(private politicaApi: PoliticaApiService) { }
 
   ngOnInit(): void {
     this.politicaApi.List().subscribe(lista => {
-      this.listaPolitica = lista;
+      this.politicaLista = lista;
+      this.politicaLista = lista.filter(function(itemLista){
+        console.log(itemLista.tags);
+        return itemLista.tags.includes('Educação');
+      });
     })
   }
 }
