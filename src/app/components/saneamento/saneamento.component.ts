@@ -10,10 +10,6 @@ import { PoliticaApiService } from 'src/app/services/politica-api.service';
 export class SaneamentoComponent implements OnInit {
 
   politicaLista: PoliticaModel[];
-<<<<<<< HEAD
-
-=======
->>>>>>> att_menu_componentes
   constructor(private politicaApi: PoliticaApiService) { }
 
   ngOnInit(): void {
