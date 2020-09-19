@@ -19,6 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { EducacaoComponent } from './components/educacao/educacao.component';
+import { SaudeComponent } from './components/saude/saude.component';
+import { SaneamentoComponent } from './components/saneamento/saneamento.component';
+import { LazerComponent } from './components/lazer/lazer.component';
+import { MobilidadeComponent } from './components/mobilidade/mobilidade.component';
+import { AcessibilidadeComponent } from './components/acessibilidade/acessibilidade.component';
+import { PlanejamentoComponent } from './components/planejamento/planejamento.component';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -27,7 +34,14 @@ registerLocaleData(localePt, 'pt-BR');
     AppComponent,
     MenuPagLayoutComponent,
     ExemploComponent,
-    SobrePageComponent
+    SobrePageComponent,
+    EducacaoComponent,
+    SaudeComponent,
+    SaneamentoComponent,
+    LazerComponent,
+    MobilidadeComponent,
+    AcessibilidadeComponent,
+    PlanejamentoComponent
   ],
   imports: [
     BrowserModule,
