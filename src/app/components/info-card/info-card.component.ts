@@ -14,7 +14,7 @@ export class InfoCardComponent implements OnInit {
   description: string;
   name: string;
   photo: string;
-  tag: string;
+  tags: string[];
 
   constructor() { }
 
@@ -27,7 +27,7 @@ export class InfoCardComponent implements OnInit {
       this.description = this.politica.description;
       this.name = this.politica.name;
       this.photo = this.politica.photo;
-      this.tag = this.politica.tag;
+      this.tags = this.politica.tags;
     }
   }
 
