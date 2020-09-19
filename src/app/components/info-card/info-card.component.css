@@ -19,7 +19,8 @@
 
 .card img {
   margin-top: 12px;
-  max-width: 100%;
+  max-width: 700px;
+  width: 100%;
 }
 
 .card .endereco {
