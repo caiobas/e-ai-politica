@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { PoliticaModel } from 'src/app/politica-model';
 
 @Component({
@@ -6,9 +6,10 @@ import { PoliticaModel } from 'src/app/politica-model';
   templateUrl: './info-card.component.html',
   styleUrls: ['./info-card.component.css']
 })
-export class InfoCardComponent implements OnInit {
+export class InfoCardComponent implements OnChanges {
 
   @Input() politica: PoliticaModel;
+  @Input() tagSelector: string;
 
   address: string;
   description: string;
@@ -17,9 +18,6 @@ export class InfoCardComponent implements OnInit {
   tags: string[];
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   ngOnChanges(): void {
     if(this.politica != null){
