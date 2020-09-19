@@ -1,5 +1,4 @@
 export class PoliticaModel {
-
   address: string;
   description: string;
   name: string;

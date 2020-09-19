@@ -26,6 +26,7 @@ import { LazerComponent } from './components/lazer/lazer.component';
 import { MobilidadeComponent } from './components/mobilidade/mobilidade.component';
 import { AcessibilidadeComponent } from './components/acessibilidade/acessibilidade.component';
 import { PlanejamentoComponent } from './components/planejamento/planejamento.component';
+import { InfoCardComponent } from './components/info-card/info-card.component';
 
 registerLocaleData(localePt, 'pt-BR');
 
@@ -41,7 +42,8 @@ registerLocaleData(localePt, 'pt-BR');
     LazerComponent,
     MobilidadeComponent,
     AcessibilidadeComponent,
-    PlanejamentoComponent
+    PlanejamentoComponent,
+    InfoCardComponent
   ],
   imports: [
     BrowserModule,
