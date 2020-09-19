@@ -1,13 +1,17 @@
-<mat-card class='card'>
-  <div class='titulo'>
-    <h3>{{name}}</h3>
-    <span>[{{tags.join(', ')}}]</span>
-  </div>
+<div class='div-card'>
+  <mat-card class='card'>
+    <div class='titulo'>
+      <h3>{{name}}</h3>
+      <span>[{{tags.join(', ')}}]</span>
+    </div>
 
-  <img [src]='photo'>
+    <div class='imagem'>
+      <img [src]='photo'>
+    </div>
 
-  <div>
-    <span class='endereco'>Local: {{address}}</span>
-    <p>{{description}}</p>
-  </div>
-</mat-card>
+    <div>
+      <span class='endereco'>Local: {{address}}</span>
+      <p>{{description}}</p>
+    </div>
+  </mat-card>
+</div>
