@@ -1,7 +1,35 @@
-span {
-  font-weight: bold;
+.card {
+  display: block;
+  margin: 10px;
 }
 
-img {
+.card h3 {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.card .titulo span {
+  font-size: x-small;
+}
+
+.card .titulo {
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  margin-top: 12px;
   max-width: 100%;
+}
+
+.card .endereco {
+  font-weight: bold;
+  font-size: x-small;
+  display: flex;
+  justify-content: center;
+}
+
+.card p {
+  margin-top: 12px;
+  margin-bottom: 0px;
 }
