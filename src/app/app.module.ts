@@ -28,7 +28,7 @@ registerLocaleData(localePt, 'pt-BR');
     MenuPagLayoutComponent,
     ExemploComponent,
     SobrePageComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
