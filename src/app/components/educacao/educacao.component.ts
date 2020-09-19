@@ -1,4 +1,3 @@
-import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { PoliticaModel } from 'src/app/politica-model';
 import { PoliticaApiService } from 'src/app/services/politica-api.service';

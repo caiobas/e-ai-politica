@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PoliticaModel } from 'src/app/politica-model';
+import { PoliticaApiService } from 'src/app/services/politica-api.service';
 
 @Component({
   selector: 'app-acessibilidade',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcessibilidadeComponent implements OnInit {
 
-  constructor() { }
+  politicaLista: PoliticaModel[];
+  constructor(private politicaApi: PoliticaApiService) { }
 
   ngOnInit(): void {
+    this.politicaApi.List().subscribe(lista => {
+      this.politicaLista = lista;
+      this.politicaLista = lista.filter(function(itemLista){
+        console.log(itemLista.tags);
+        return itemLista.tags.includes('Acessibilidade');
+      });
+    })
   }
-
 }
