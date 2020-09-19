@@ -6,3 +6,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 h1 {
   text-align: center;
 }
+
+.titulo-pagina {
+  text-align: center;
+  margin-top: 20px !important;
+}
