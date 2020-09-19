@@ -4,7 +4,13 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/" routerLinkActive="active">Home</a>
-      <a mat-list-item routerLink="/sobre" routerLinkActive="active">Sobre</a>
+      <a mat-list-item routerLink="/acessibilidade" routerLinkActive="active">Acessibilidade</a>
+      <a mat-list-item routerLink="/educacao" routerLinkActive="active">Educação</a>
+      <a mat-list-item routerLink="/saude" routerLinkActive="active">Saúde</a>
+      <a mat-list-item routerLink="/saneamento" routerLinkActive="active">Saneamento Básico</a>
+      <a mat-list-item routerLink="/lazer" routerLinkActive="active">Lazer</a>
+      <a mat-list-item routerLink="/mobilidade" routerLinkActive="active">Mobilidade Urbana</a>
+      <a mat-list-item routerLink="/planejamento" routerLinkActive="active">Planejamento Urbano</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -13,7 +19,7 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>projeto</span>
+      <span>E ai Política!</span>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
