@@ -9,12 +9,16 @@ import { PoliticaApiService } from 'src/app/services/politica-api.service';
 })
 export class AcessibilidadeComponent implements OnInit {
 
-  listaProblemas: PoliticaModel[];
+  politicaLista: PoliticaModel[];
   constructor(private politicaApi: PoliticaApiService) { }
 
   ngOnInit(): void {
-    this.politicaApi.List().subscribe((lista)=>{
-      this.listaProblemas = lista
-  })
-}
+    this.politicaApi.List().subscribe(lista => {
+      this.politicaLista = lista;
+      this.politicaLista = lista.filter(function(itemLista){
+        console.log(itemLista.tags);
+        return itemLista.tags.includes('Acessibilidade');
+      });
+    })
+  }
 }
