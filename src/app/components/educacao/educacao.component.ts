@@ -1,4 +1,7 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { PoliticaModel } from 'src/app/politica-model';
+import { PoliticaApiService } from 'src/app/services/politica-api.service';
 
 @Component({
   selector: 'app-educacao',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducacaoComponent implements OnInit {
 
-  constructor() { }
+  listaPolitica: PoliticaModel[];
+
+  constructor(private politicaApi: PoliticaApiService) { }
 
   ngOnInit(): void {
+    this.politicaApi.List().subscribe(lista => {
+      this.listaPolitica = lista;
+    })
   }
-
 }
