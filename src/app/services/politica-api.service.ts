@@ -12,7 +12,7 @@ export class PoliticaApiService {
 
   }
 
-  public List():Observable<PoliticaModel> {
-    return this.httpClient.get<PoliticaModel>('https://it3yui.firebaseio.com/problemas.json');
+  public List():Observable<PoliticaModel[]> {
+    return this.httpClient.get<PoliticaModel[]>('https://it3yui.firebaseio.com/problemas.json');
   }
 }
